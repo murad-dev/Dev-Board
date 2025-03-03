@@ -4,23 +4,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevBoard</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/893be0074d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <nav class="flex justify-between">
-            <div class="flex">
-                <img src="assets/logo.png" alt="DevBoard">
-                <p>Dev<span>Board</span></p>
-            </div>
-            <div>
-                <img src="assets/checkbox.png" alt="checkbox">
+        <nav>
+            <div class="logo flex justify-between shadow-lg py-2">
+                <div class="flex items-center gap-2">
+                    <img src="assets/logo.png" alt="logo">
+                    <h2 class="text-[#00303c] text-4xl">Dev<span class="font-bold">Board</span></h2>
+                </div>
+                <div class="flex gap-9 items-center">
+                    <div class="flex gap-2">
+                        <img src="assets/checkbox.png" alt="checkbox">
+                        <p>23</p>
+                    </div>
+                    <div>
+                        <img src="assets/theme-btn.png" alt="theme-btn">
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
+    <main>
+        <section class="mt-5">
+            <div class="container flex gap-6">
+                <div class="left-container w-3/4">
+                    <div class="navbar flex justify-around items-center">
+                        <div class="flex items-center gap-5">
+                            <div>
+                                <img src="assets/checkbox.png" alt="checkbox">
+                            </div>
+                            <div>
+                                <p>Task Assigned</p>
+                                <p>05</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center rounded-xl gradient px-2">
+                            <div>
+                                <img src="assets/board.png" alt="board">
+                            </div>
+                            <div>
+                                <p>Discover Something New Today!</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div>
+                                <img src="assets/checkbox.png" alt="checkbox">
+                            </div>
+                            <div>
+                                <p>Wed , </p>
+                                <p>Jul 28 2025 </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-3 mt-8">
+                        <div class="card rounded-2xl p-6">
+                            <p class="text-[#00303c]">ShopEase</p>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Fix Mobile Button Issue </h3>
+                            <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                                properly </p>
+                            <div class="deadline-container flex justify-between items-center mt-4">
+                                <div class="deadline-text">
+                                    <p class="text-[#00303c] text-sm">Deadline</p>
+                                    <p class="text-[#00303c]">21 March 2025</p>
+                                </div>
+                                <div class="deadline-btn">
+                                    <button class="btn_completed">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl p-6">
+                            <p class="text-[#00303c]">CloudSync</p>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Add Dark Mode</h3>
+                            <p>Store the user's preference in localStorage, update CSS variables dynamically, and apply
+                                a smooth transition effect.</p>
+                            <div class="deadline-container flex justify-between items-center mt-4">
+                                <div class="deadline-text">
+                                    <p class="text-[#00303c] text-sm">Deadline</p>
+                                    <p class="text-[#00303c]">21 March 2025</p>
+                                </div>
+                                <div class="deadline-btn">
+                                    <button class="btn_completed">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl p-6">
+                            <p class="text-[#00303c]">SwiftPay</p>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Optimize Home page </h3>
+                            <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                                properly </p>
+                            <div class="deadline-container flex justify-between items-center mt-4">
+                                <div class="deadline-text">
+                                    <p class="text-[#00303c] text-sm">Deadline</p>
+                                    <p class="text-[#00303c]">21 March 2025</p>
+                                </div>
+                                <div class="deadline-btn">
+                                    <button class="btn_completed">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl p-6">
+                            <p class="text-[#00303c]">Meta</p>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Add new emoji 🤲</h3>
+                            <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                                properly </p>
+                            <div class="deadline-container flex justify-between items-center mt-4">
+                                <div class="deadline-text">
+                                    <p class="text-[#00303c] text-sm">Deadline</p>
+                                    <p class="text-[#00303c]">21 March 2025</p>
+                                </div>
+                                <div class="deadline-btn">
+                                    <button class="btn_completed">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl p-6">
+                            <p class="text-[#00303c]">Google LLC</p>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Integrate OpenAI API </h3>
+                            <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                                properly </p>
+                            <div class="deadline-container flex justify-between items-center mt-4">
+                                <div class="deadline-text">
+                                    <p class="text-[#00303c] text-sm">Deadline</p>
+                                    <p class="text-[#00303c]">21 March 2025</p>
+                                </div>
+                                <div class="deadline-btn">
+                                    <button class="btn_completed">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card rounded-2xl p-6">
+                            <p class="text-[#00303c]">Glassdoar</p>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Improve Job search</h3>
+                            <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
+                                properly </p>
+                            <div class="deadline-container flex justify-between items-center mt-4">
+                                <div class="deadline-text">
+                                    <p class="text-[#00303c] text-sm">Deadline</p>
+                                    <p class="text-[#00303c]">21 March 2025</p>
+                                </div>
+                                <div class="deadline-btn">
+                                    <button class="btn_completed">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-container w-1/4">
+                    <div class="flex flex-col items-center gap-4">
+                        <div class="history-container flex gap-4 justify-center">
+                            <p><i class="fa-solid fa-clock-rotate-left"></i></p>
+                            <p>Activity Log</p>
+                        </div>
+                        <div class="">
+                            <button class="btn_completed">Clear History</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
