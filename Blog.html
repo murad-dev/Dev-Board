@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="px-40">
+    <header class="mb-12">
+        <nav>
+            <div class="logo flex justify-between shadow-lg py-2">
+                <div class="flex items-center gap-2">
+                    <img src="assets/logo.png" alt="logo">
+                    <h2 class="text-[#00303c] text-4xl">Dev<span class="font-bold">Board</span></h2>
+                </div>
+                <div class="flex gap-9 items-center">
+                    <button id="back-to-desk"
+                        class="text-white bg-gradient-to-tr from-blue-500 via-blue-600 to-blue-700 font-medium rounded-lg px-5 py-2.5 text-center me-2 mb-2">Back
+                        to Destk</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h3 class="my-3"><span class="text-xl">Question-1:</span> What are the different ways to select an element
+                in the DOM?</h3>
+            <p>Ways to select an element in the DOM is:</p>
+            <ul>
+                <li>getElementById</li>
+                <li>getElementsByClassName</li>
+                <li>getElementsByTagName</li>
+                <li>querySelector</li>
+                <li>querySelectorAll</li>
+            </ul>
+            <h3 class="my-3"><span class="text-xl">Question-2:</span> What is the difference between innerHTML,
+                innerText, and textContent ?</h3>
+            <ul>
+                <li>innerHTML: It is used to change or read the entire HTML code in an HTML element.</li>
+                <li>innerText: It only returns or sets text and ignores HTML tags.</li>
+                <li>textContent: This is similar to innerText, but it also returns the text of elements with CSS
+                    display:
+                    none;</li>
+            </ul>
+            <h3 class="my-3"><span class="text-xl">Question-3:</span> What is event delegation in the DOM?</h3>
+            <ul>
+                <li>Event delegation in the DOM is a JavaScript technique that uses the "event bubbling" process to
+                    attach
+                    an event listener to a parent element, <br> allowing it to handle events triggered on its child
+                    elements, rather than adding a separate listener to each child element.</li>
+            </ul>
+            <h3 class="my-3"><span class="text-xl">Question-4:</span> What is event bubbling in the DOM?</h3>
+            <ul>
+                <li>Event bubbling is a process of DOM event propagation where when an event occurs on a child element,
+                    the
+                    event is first handled on that <br> child element and then gradually propagates to its parent
+                    elements
+                    until it reaches the document.</li>
+            </ul>
+            <h3 class="my-3"><span class="text-xl">Question-5:</span> How do you create, add, and remove elements using
+                JavaScript?</h3>
+            <ul>
+                <li>document.createElement("tagName") - A new element can be created using this command.</li>
+                <li>appendChild() – Add as the last child of the parent</li>
+                <li>remove() – Deletes an element directly</li>
+            </ul>
+        </div>
+    </main>
+    <script src="scripts/toggle.js"></script>
+</body>
+
+</html>

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevBoard</title>
+    <link rel="stylesheet" href="style/main.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style/main.css">
     <script src="https://kit.fontawesome.com/893be0074d.js" crossorigin="anonymous"></script>
 </head>
 
@@ -22,10 +22,10 @@
                 <div class="flex gap-9 items-center">
                     <div class="flex gap-2">
                         <img src="assets/checkbox.png" alt="checkbox">
-                        <p>23</p>
+                        <p id="total-completeTask">0</p>
                     </div>
                     <div>
-                        <img src="assets/theme-btn.png" alt="theme-btn">
+                        <img id="theme-change-btn" src="assets/theme-btn.png" alt="theme-btn">
                     </div>
                 </div>
             </div>
@@ -42,10 +42,10 @@
                             </div>
                             <div>
                                 <p>Task Assigned</p>
-                                <p>05</p>
+                                <p id="task-assigned">0</p>
                             </div>
                         </div>
-                        <div class="flex items-center rounded-xl gradient px-2">
+                        <div id="Discover-window" class="flex items-center rounded-xl gradient px-2 cursor-pointer">
                             <div>
                                 <img src="assets/board.png" alt="board">
                             </div>
@@ -58,15 +58,15 @@
                                 <img src="assets/checkbox.png" alt="checkbox">
                             </div>
                             <div>
-                                <p>Wed , </p>
-                                <p>Jul 28 2025 </p>
+                                <p id="current-day"></p>
+                                <p id="current-date"></p>
                             </div>
                         </div>
                     </div>
                     <div class="grid grid-cols-3 mt-8">
                         <div class="card rounded-2xl p-6">
                             <p class="text-[#00303c]">ShopEase</p>
-                            <h3 class="text-[#00303c] my-4 text-2xl">Fix Mobile Button Issue </h3>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Fix Mobile Button Prob </h3>
                             <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
                                 properly </p>
                             <div class="deadline-container flex justify-between items-center mt-4">
@@ -75,14 +75,14 @@
                                     <p class="text-[#00303c]">21 March 2025</p>
                                 </div>
                                 <div class="deadline-btn">
-                                    <button class="btn_completed">Completed</button>
+                                    <button id="completed-btn-1" class="btn_completed">Completed</button>
                                 </div>
                             </div>
                         </div>
                         <div class="card rounded-2xl p-6">
                             <p class="text-[#00303c]">CloudSync</p>
                             <h3 class="text-[#00303c] my-4 text-2xl">Add Dark Mode</h3>
-                            <p>Store the user's preference in localStorage, update CSS variables dynamically, and apply
+                            <p>Store the user's preference in localStorage, CSS dynamically, and apply
                                 a smooth transition effect.</p>
                             <div class="deadline-container flex justify-between items-center mt-4">
                                 <div class="deadline-text">
@@ -90,13 +90,13 @@
                                     <p class="text-[#00303c]">21 March 2025</p>
                                 </div>
                                 <div class="deadline-btn">
-                                    <button class="btn_completed">Completed</button>
+                                    <button id="completed-btn-2" class="btn_completed">Completed</button>
                                 </div>
                             </div>
                         </div>
                         <div class="card rounded-2xl p-6">
                             <p class="text-[#00303c]">SwiftPay</p>
-                            <h3 class="text-[#00303c] my-4 text-2xl">Optimize Home page </h3>
+                            <h3 class="text-[#00303c] my-4 text-2xl">Optimize Home page</h3>
                             <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
                                 properly </p>
                             <div class="deadline-container flex justify-between items-center mt-4">
@@ -105,7 +105,7 @@
                                     <p class="text-[#00303c]">21 March 2025</p>
                                 </div>
                                 <div class="deadline-btn">
-                                    <button class="btn_completed">Completed</button>
+                                    <button id="completed-btn-3" class="btn_completed">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@
                                     <p class="text-[#00303c]">21 March 2025</p>
                                 </div>
                                 <div class="deadline-btn">
-                                    <button class="btn_completed">Completed</button>
+                                    <button id="completed-btn-4" class="btn_completed">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -135,12 +135,12 @@
                                     <p class="text-[#00303c]">21 March 2025</p>
                                 </div>
                                 <div class="deadline-btn">
-                                    <button class="btn_completed">Completed</button>
+                                    <button id="completed-btn-5" class="btn_completed">Completed</button>
                                 </div>
                             </div>
                         </div>
                         <div class="card rounded-2xl p-6">
-                            <p class="text-[#00303c]">Glassdoar</p>
+                            <p class="text-[#00303c]">Glassdoor</p>
                             <h3 class="text-[#00303c] my-4 text-2xl">Improve Job search</h3>
                             <p>Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works
                                 properly </p>
@@ -150,26 +150,30 @@
                                     <p class="text-[#00303c]">21 March 2025</p>
                                 </div>
                                 <div class="deadline-btn">
-                                    <button class="btn_completed">Completed</button>
+                                    <button id="completed-btn-6" class="btn_completed">Completed</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="right-container w-1/4">
-                    <div class="flex flex-col items-center gap-4">
-                        <div class="history-container flex gap-4 justify-center">
-                            <p><i class="fa-solid fa-clock-rotate-left"></i></p>
-                            <p>Activity Log</p>
+                    <div id="history" class="flex historyClean flex-col items-center gap-4">
+                        <div class="flex justify-center">
+                            <p><i class="fa-solid fa-clock-rotate-left"></i><span
+                                    class="text-xl font-bold px-2">Activity Log</span></p>
                         </div>
-                        <div class="">
-                            <button class="btn_completed">Clear History</button>
+                        <div>
+                            <button id="clear-history-btn" class="btn_history btn_completed">Clear History</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/themeColor.js"></script>
+    <script src="scripts/date.js"></script>
+    <script src="scripts/toggle.js"></script>
 </body>
 
 </html>

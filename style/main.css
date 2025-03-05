@@ -7,12 +7,22 @@
 }
 
 body{
-    margin: 12px 140px;
     font-family: "Poppins", sans-serif;
+    padding: 0 140px;
 }
 
 
 .btn_completed{
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    background-color: #3752fd;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.btn_history{
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     background-color: #3752fd;
